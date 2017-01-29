@@ -1,0 +1,131 @@
+@import "variables";
+@import "mainPage";
+
+/*====================================================================*/
+/* BACKGROUND*/
+/*====================================================================*/
+.backgroundBase{
+  height: 100%;
+  width: 100%;
+  background-size: 40%;
+  position: absolute;
+}
+
+#bg {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: -20;
+}
+
+#bglt {
+  background: url('../img/background/left_top.png') no-repeat fixed;
+  .backgroundBase;
+}
+
+#bgrb {
+  background: url('../img/background/right_bottom.png') no-repeat fixed 100% 100%;
+  bottom: 0;
+  right: 0;
+  .backgroundBase;
+}
+
+/*====================================================================*/
+/* HEADER */
+/*====================================================================*/
+.navbar-brand{
+  margin: 0;
+  padding: 0;
+  img{
+    max-height: 100%;
+  }
+}
+
+#myNavbar .navbar-nav > li {
+    margin-left: 15px;
+  font-size: @fontSizeGeneral;
+    >a:hover{
+      background: url('../img/background/backstars.png') repeat-x;
+      opacity: 0.6;
+      font-weight: bolder;
+
+  }
+}
+
+.baseHoverMenu(@color){
+  background-color: @color;
+  a{
+    background-color: @color;
+  }
+}
+
+ul.dropdown-menu{
+  padding: 0;
+  margin: 0;
+  li{
+    padding: 15px 0;
+  }
+  li:hover > a{
+    color: @colorWhite;
+  }
+  li:nth-child(1):hover{
+    .baseHoverMenu(@colorBlue);
+  }
+  li:nth-child(2):hover{
+    .baseHoverMenu(@colorPink);
+  }
+  li:nth-child(3):hover{
+    .baseHoverMenu(@colorYellow);
+  }
+}
+
+.navbar-default {
+  background-color: @colorWhite;
+  border-bottom: 5px solid @colorPink;
+  padding: 5px;
+}
+
+/*====================================================================*/
+/* FOOTER */
+/*====================================================================*/
+footer{
+  border-top: 5px solid @colorPink;
+  padding-top: 10px;
+}
+#sponsors{
+  border-left: 2px solid fadeout(@colorGreyDark, 30%);
+
+}
+
+#copyright{
+  text-align: center;
+}
+
+/*====================================================================*/
+/* CONTENT */
+/*====================================================================*/
+#content{
+  text-align: center;
+}
+
+/*====================================================================*/
+/* MEDIA */
+/*====================================================================*/
+
+@desktop: ~"only screen and (min-width: 996px)";
+@tablet: ~"only screen and (min-width: 768px)";
+@mobile: ~"only screen and (max-width: 767px)";
+
+@media @mobile {
+}
+
+@media @tablet {
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+  }
+}
+
+@media @desktop {
+
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <base href="/">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>wITches</title>
+        <meta name="description" content="Učíme dětí kouzlit v IT" />
+
+        <!-- FONTS -->
+        <link href='https://fonts.googleapis.com/css?family=Asap&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+        <!-- BOOTSTRAP -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+        <!-- OWN STYLESHEETS -->
+        <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
+        <!-- LESS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
+    </head>
+
+    <body ng-app="witches" ng-controller="MainController">
+        <!-- Loading the header -->
+        <div id="header" ng-include="'src/header.html'"></div>
+
+        <!-- BACKGROUND -->
+        <div id="bg">
+            <div id="bglt"> </div>
+            <div id="bgrb"> </div>
+        </div>
+        <!-- Loading the content templates -->
+        <div id="content" class="container-fluid" ng-view=""></div>
+        <!-- Loading the footer -->
+        <footer ng-include="'src/footer.html'"></footer>
+
+        <!-- =====================JS scripts loading============================= -->
+        <!-- JQUERY -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <!-- BOOTSTRAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <!-- ANGULAR JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular-route.min.js"></script>
+        <!-- MY SCRIPTS -->
+        <script src="js/app.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

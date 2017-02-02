@@ -1,120 +1,122 @@
 <!--  LOGO -->
 <div class="row">
     <div id="logo">
-        <img class="img-responsive" id="logo-back" src="img/logos/hat_back.png" alt="wITches">
+        <a scroll-on-click href="#mainInfo">
+        <img class="img-responsive" id="logo-back" src="img/logos/hat_back.png">
         <img class="img-responsive" id="logo-mid" src="img/logos/hat_mid.png">
         <img class="img-responsive" id="logo-front" src="img/logos/hat_front.png">
+        </a>
     </div>
 </div>
 
 <!-- WE LEARN CHILDREN TO DO MAGIC IN IT -->
-<div class="row">
+<div class="row centering">
     <h1 class="motto">UČÍME DĚTI KOUZLIT V IT</h1>
-    <div class="row"><p>Kouzlit zvládne každý!</p></div>
+    <div class="row"><p class="subMotto">Kroužek a workshopy zdarma. Vhodné pro děti 2. stupně ZŠ.</p></div>
     <div class="row marginTop30">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
 
             <!--ALICE-->
             <div class="col-sm-4">
-                <a href="#alice">
+                <a scroll-on-click href="#alice">
                     <div id="circuitAlice" class="row">
                         <div class="circuitIn">
                             <img src="img/icons/robots/alice.png" alt="programming" width="90">
                         </div>
                     </div>
                 </a>
-                <div class="row circuitTitle"><h5>OBJEKTOVÉ PROGRAMOVÁNÍ</h5></div>
-                <div class="row lineAlice"></div>
-                <div class="row popisKrouzku">
+                <div class="circuitTitle"><h5>OBJEKTOVÉ <span style = "display: block;">PROGRAMOVÁNÍ</span></h5></div>
+                <div class="lineAlice"></div>
+                <div class="popisKrouzku">
                     <p>Stačí přemýšlet, napsat pár řádků a animovaný film či počítačová hra je na světě.</p>
                 </div>
             </div>
 
             <!--BOFFIN-->
             <div class="col-sm-4">
-                <a href="#boffin">
+                <a scroll-on-click href="#boffin">
                     <div id="circuitBoffin" class="row">
                         <div class="circuitIn">
                             <img src="img/icons/robots/boffin.png" alt="elektro" height="90">
                         </div>
                     </div>
                 </a>
-                <div class="row circuitTitle"><h5 >ELEKTROSTAVEBNICE BOFFIN</h5></div>
-                <div class="row lineBoffin"></div>
-                <div class="row row-centered popisKrouzku">
+                <div class="circuitTitle"><h5 >ELEKTROSTAVEBNICE <span style = "display: block;">BOFFIN</span></h5></div>
+                <div class="lineBoffin"></div>
+                <div class="popisKrouzku">
                     <p>Vykouzlete obvody, rozsviťte diodky, roztočte vrtule.</p>
                 </div>
             </div>
 
             <!--ROBOTS-->
             <div class="col-sm-4">
-                <a href="#legorobots">
+                <a scroll-on-click href="#lego">
                     <div id="circuitRobot" class="row">
                         <div class="circuitIn">
                             <img src="img/icons/robots/lego.png" alt="robot" width="90">
                         </div>
                     </div>
                 </a>
-                <div class="row circuitTitle"><h5>PROGRAMOVÁNÍ LEGOROBOTŮ</h5></div>
-                <div class="row lineRobot"></div>
-                <div class="row popisKrouzku">
+                <div class="circuitTitle"><h5>PROGRAMOVÁNÍ <span style = "display: block;">LEGO ROBOTŮ</span></h5></div>
+                <div class="lineRobot"></div>
+                <div class="popisKrouzku">
                     <p>Nechte kouzla ať ovládají roboty místo vás. Roboti LEGO Mindstorms už na Vás čekají.</p>
                 </div>
             </div>
         </div>
-        <div class="col-lg-2"></div>
+        <div class="col-md-2"></div>
     </div>
 </div>
 
 <!-- ALICE -->
 <div id="alice" class="row stripe">
-    <div class="row row-eq-height">
-        <div class="col-sm-0 col-md-1"></div>
-        <div class="col-sm-6 col-md-5">
-            <h2 class="text-uppercase text-left">Hravé programování s&nbsp;Alice</h2>
-            <p class="text-left">Děti se naučí základy objektového programování pomocí grafického editoru Alice. Vytvoří
+    <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10 col-sm-5">
+            <h2>HRAVÉ PROGRAMOVÁNÍ S ALICE</h2>
+            <p>Děti se naučí základy objektového programování pomocí grafického editoru Alice. Vytvoří
                 postavičky, vymyslí vlastní algoritmus, pomocí něhož postavičky naprogramují. Tak vykouzlí vlastní
                 magický příběh. Kreativitě se meze nekladou!</p>
-            <button id="btn-alice" class="btn btn-primary btn-lg btn-pink">Chci to zkusit !</button>
+            <button class="btn btn-lg btn-pink" ng-click="tryWorkshop('/workshops/alice')" >Chci to zkusit !</button>
         </div>
-        <div class="col-sm-6 col-md-6">
-            <img id="robAlice" src="img/robots/aliceCut.png"/>
+        <div id="robAlice" class="col-sm-6 col-xs-1">
+            <img class="hidden-xs" src="img/robots/aliceCut.png"/>
         </div>
     </div>
 </div>
 
 <!-- BOFFIN -->
 <div id="boffin" class="row stripe">
-    <div class="row row-eq-height">
-        <div class="col-sm-6 col-md-6">
-            <img id="robBoffin" src="img/robots/boffinCut.png"/>
+    <div class="row">
+        <div id="robBoffin" class="col-sm-6 col-xs-1">
+            <img class="hidden-xs" src="img/robots/boffinCut.png"/>
         </div>
-        <div class="col-sm-6 col-md-5">
+        <div class="col-xs-10 col-sm-5">
             <h2 class="text-uppercase text-left">Kouzla elektra se&nbsp;stavebnicí Boffin</h2>
             <p class="text-left">Děti pochopí základy elektrických obvodů hravou formou se stavebnicí Boffin. Během
                 kroužku spojíme dohromady teoretické základy a praktické zapojování obvodů. Sestrojíme poplach, trombón
                 nebo třeba rádio. Samozřejmě nebudou chybět soutěže a práce ve skupinkách. Nechte se překvapit, co
                 všechno společně vykouzlíme!</p>
-            <button id="btn-boffin" class="btn btn-primary btn-lg btn-yellow">Chci to zkusit !</button>
+            <button class="btn btn-lg btn-yellow" ng-click="tryWorkshop('/workshops/boffin')">Chci to zkusit !</button>
         </div>
-        <div class="col-sm-0 col-md-1"></div>
+        <div class="col-xs-1"></div>
     </div>
 </div>
 
 <!-- MINDSTORMS -->
 <div id="lego" class="row stripe">
-    <div class="row row-eq-height">
-        <div class="col-sm-0 col-md-1"></div>
-        <div class="col-sm-6 col-md-5">
-            <h2 class="text-uppercase text-left">Kamarádští roboti z&nbsp;LEGO MINDSTORMS</h2>
-            <p class="text-left">Ze stavebnice Lego Mindstorms si postaví vlastního robota, kterého následně v grafickém
+    <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10 col-sm-5">
+            <h2>KAMARÁDŠTÍ ROBOTI Z LEGO MINDSTORMS</h2>
+            <p>Ze stavebnice Lego Mindstorms si postaví vlastního robota, kterého následně v grafickém
                 prostředí naprogramují. Robot tedy bude dělat přesně to, co děti samy vymyslely. Hledáme každého kdo má
                 rád lego a oplývá skvělými nápady. Pod vaší kouzelnou hůlkou roboti oživnou!</p>
-            <button id="btn-robots" class="btn btn-primary btn-lg btn-blue">Chci to zkusit !</button>
+            <button class="btn btn-lg btn-blue" ng-click="tryWorkshop('/workshops/mindstorms')">Chci to zkusit !</button>
         </div>
-        <div class="col-sm-6 col-md-6">
-            <img id="robLego" src="img/robots/legoCut.png"/>
+        <div id="robLego" class="col-sm-6 col-xs-1">
+            <img class="hidden-xs" src="img/robots/legoCut.png"/>
         </div>
     </div>
 </div>

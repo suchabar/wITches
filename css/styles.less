@@ -1,10 +1,11 @@
 @import "variables";
 @import "mainPage";
+@import "workshops";
 
 /*====================================================================*/
 /* BACKGROUND*/
 /*====================================================================*/
-.backgroundBase{
+.backgroundBase {
   height: 100%;
   width: 100%;
   background-size: 40%;
@@ -34,48 +35,48 @@
 /*====================================================================*/
 /* HEADER */
 /*====================================================================*/
-.navbar-brand{
+.navbar-brand {
   margin: 0;
   padding: 0;
-  img{
+  img {
     max-height: 100%;
   }
 }
 
 #myNavbar .navbar-nav > li {
-    margin-left: 15px;
+  margin-left: 15px;
   font-size: @fontSizeGeneral;
-    >a:hover{
-      background: url('../img/background/backstars.png') repeat-x;
-      opacity: 0.6;
-      font-weight: bolder;
+  > a:hover {
+    background: url('../img/background/backstars.png') repeat-x;
+    opacity: 0.6;
+    font-weight: bolder;
 
   }
 }
 
-.baseHoverMenu(@color){
+.baseHoverMenu(@color) {
   background-color: @color;
-  a{
+  a {
     background-color: @color;
   }
 }
 
-ul.dropdown-menu{
+ul.dropdown-menu {
   padding: 0;
   margin: 0;
-  li{
+  li {
     padding: 15px 0;
   }
-  li:hover > a{
+  li:hover > a {
     color: @colorWhite;
   }
-  li:nth-child(1):hover{
+  li:nth-child(1):hover {
     .baseHoverMenu(@colorBlue);
   }
-  li:nth-child(2):hover{
+  li:nth-child(2):hover {
     .baseHoverMenu(@colorPink);
   }
-  li:nth-child(3):hover{
+  li:nth-child(3):hover {
     .baseHoverMenu(@colorYellow);
   }
 }
@@ -86,46 +87,104 @@ ul.dropdown-menu{
   padding: 5px;
 }
 
-/*====================================================================*/
-/* FOOTER */
-/*====================================================================*/
-footer{
-  border-top: 5px solid @colorPink;
-  padding-top: 10px;
-}
-#sponsors{
-  border-left: 2px solid fadeout(@colorGreyDark, 30%);
-
-}
-
-#copyright{
-  text-align: center;
-}
-
-/*====================================================================*/
-/* CONTENT */
-/*====================================================================*/
-#content{
-  text-align: center;
-}
-
-/*====================================================================*/
-/* MEDIA */
-/*====================================================================*/
-
-@desktop: ~"only screen and (min-width: 996px)";
-@tablet: ~"only screen and (min-width: 768px)";
-@mobile: ~"only screen and (max-width: 767px)";
-
-@media @mobile {
-}
-
 @media @tablet {
   ul.nav li.dropdown:hover > ul.dropdown-menu {
     display: block;
   }
 }
 
-@media @desktop {
+/*====================================================================*/
+/* FOOTER */
+/*====================================================================*/
+footer {
+  border-top: 5px solid @colorPink;
+  padding-top: 10px;
+  img {
+    max-height: 62px;
+    padding: 5px;
+  }
+}
 
+#sponsors {
+  border-left: 2px solid fadeout(@colorGreyDark, 30%);
+}
+
+.supportUsTitle {
+  padding-left: 20px;
+}
+
+#copyright {
+  text-align: center;
+}
+
+/*====================================================================*/
+/* CONTACTS SIDEBAR */
+/*====================================================================*/
+
+
+
+#sticky-social {
+  [class*="entypo-"]:before {
+    font-family: "entypo", sans-serif;
+  }
+
+  right: 0;
+  position: fixed;
+  top: 150px;
+  a, button {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+    text-align: center;
+    width: 35px;
+    span{
+      line-height: 35px;
+      right: -140px;
+      position: absolute;
+      text-align: center;
+      width: 140px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#sticky-social a:hover span,
+#sticky-social button:hover span {
+  right: 100%;
+}
+
+
+
+.stickyItemBase(@colorItem){
+  background: @colorItem;
+  &:hover{
+    background: @colorItem;
+  }
+  span {
+    background: fadeout(@colorItem, 20%);
+  }
+}
+
+#sticky-social a[class*="facebook"]{
+  .stickyItemBase(#3b5998);
+}
+
+#sticky-social a[class*="mail"] {
+  .stickyItemBase(@colorPink);
+}
+
+#sticky-social a[class*="phone"] {
+  .stickyItemBase(@colorYellow);
+}
+
+#sticky-social a[class*="paper-plane"]{
+  .stickyItemBase(@colorBlue);
 }

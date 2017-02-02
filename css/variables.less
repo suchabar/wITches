@@ -23,11 +23,22 @@
 
 //Font sizes
 @fontSizeGeneral: 1.3em;
+@fontSizeExtraLarge: 5.5em;
 @fontSizeH1: 3.2em;
 @fontSizeH2: 2.2em;
 @fontSizeH3: 2.1em;
 @fontSizeH4: 2em;
 @fontSizeH5: 1.8em;
+
+// Sizes - Main page
+@bigLogo: 300px;
+@smallLogo: 200px;
+@sizeCircles: 150px;
+@sizeInCircles: 130px;
+
+@widthCirclesPercentage: 90%;
+@widthDescription: 70%;
+@heightLines: 8px;
 
 /*====================================================================*/
 /* MAIN STRUCTURE */
@@ -72,6 +83,14 @@ p, label, input, button {
 }
 
 /*====================================================================*/
+/* MEDIA */
+/*====================================================================*/
+
+@desktop: ~"only screen and (min-width: 996px)";
+@tablet: ~"only screen and (min-width: 768px)";
+@mobile: ~"only screen and (max-width: 767px)";
+
+  /*====================================================================*/
 /* HELP STRUCTURES*/
 /*====================================================================*/
 
@@ -85,4 +104,13 @@ p, label, input, button {
 
 .paddingBottom20{
   margin-bottom: 20px;
+}
+
+.centering{
+  text-align: center;
+}
+
+.vcenter {
+  display: flex;
+  align-items: center;
 }

@@ -1,0 +1,68 @@
+#transparentWhiteBackground {
+  background-color: @colorWhiteTrans;
+}
+
+.banner {
+  margin: 60px auto 15px auto;
+  img {
+    max-width: 100%;
+  }
+}
+
+.btn-alice-form, .btn-lego-form, .btn-boffin-form {
+  float: none;
+  margin-bottom: 15px;
+}
+
+.baseEmbedded(@vidWidth, @vidHeight) {
+  frameborder: 0px;
+  width: @vidWidth;
+  height: @vidHeight;
+
+}
+
+@media @mobile {
+  .embeddedVideo {
+    .baseEmbedded(480px, 280px);
+  }
+
+}
+
+@media @tablet {
+  .embeddedVideo {
+    .baseEmbedded(640px, 360px);
+  }
+}
+
+.meetUsTogether {
+    h1{
+      font-size: @fontSizeExtraLarge;
+    }
+    img{
+      height: 400px;
+    }
+  }
+
+.workshopLine(@lineColor) {
+  border-bottom: 2px solid @lineColor;
+}
+
+.pinkBottomLine {
+  .workshopLine(@colorPink);
+}
+
+.yellowBottomLine {
+  .workshopLine(@colorYellow);
+}
+
+.blueBottomLine {
+  .workshopLine(@colorBlue);
+}
+
+.circleTeacher {
+  img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+  }
+}

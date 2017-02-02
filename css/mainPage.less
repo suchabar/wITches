@@ -1,158 +1,169 @@
 /*====================================================================*/
 /* BIG LOGO */
 /*====================================================================*/
+.baseLogo(@widthHeightLogo) {
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 
-// Sizes - big screen
-@sizeLogo: 300px;
-@sizeCircles: 150px;
-@sizeInCircles: 130px;
+  height: @widthHeightLogo;
+  margin: 100px auto auto auto;
+  position: relative;
+  width: @widthHeightLogo - 20px;
+  z-index: 10;
+  img {
+    height: @widthHeightLogo;
+    position: absolute;
+    width: @widthHeightLogo;
+  }
+}
 
+@media @mobile {
+  #logo {
+    .baseLogo(@smallLogo);
+  }
+}
 
-@widthCirclesPercentage: 90%;
-@widthDescription: 70%;
-@heightLines: 8px;
-
-#logo {
-    -moz-transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-
-    height: @sizeLogo;
-    margin: 100px auto auto auto;
-    position: relative;
-    width: @sizeLogo;
-    z-index: 10;
-    img{
-        height: @sizeLogo;
-        position: absolute;
-        width: @sizeLogo;
-    }
+@media @tablet {
+  #logo {
+    .baseLogo(@bigLogo);
+  }
 }
 
 .motto {
-    margin: auto;
-    .marginTop30;
-    width: @widthDescription;
+  margin: auto;
+  .marginTop30;
+  width: @widthDescription;
 }
 
-.circuitTitle{
-    .marginTop30;
+.subMotto {
+  margin: auto;
+  width: @widthDescription;
+}
+
+.circuitTitle {
+  .marginTop30;
 
 }
 
-
-#alice, #lego{
-    background-color: @colorBlackTrans;
-    h2,p {
-        color: @colorWhite;
-    }
+#alice, #lego {
+  background-color: @colorBlackTrans;
+  h2, p {
+    color: @colorWhite;
+  }
 }
 
 /* WE LEARN CHILDREN TO DO MAGIC IN IT */
-.baseCircuit(@sizeCircle : @sizeCircles, @color: @colorLightGrey){
-    background-color: @color;
-    height: @sizeCircle;
-    width: @sizeCircle;
-    max-width: @widthCirclesPercentage;
-    border-radius: 50%;
-    margin: auto;
+.baseCircuit(@sizeCircle : @sizeCircles, @color: @colorLightGrey) {
+  background-color: @color;
+  height: @sizeCircle;
+  width: @sizeCircle;
+  max-width: @widthCirclesPercentage;
+  border-radius: 50%;
+  margin: auto;
 }
 
 #circuitBoffin {
-    .baseCircuit();
-    &:hover {
-        background-color: @colorYellow;
-    }
+  .baseCircuit();
+  &:hover {
+    background-color: @colorYellow;
+  }
 }
+
 #circuitAlice {
-    .baseCircuit();
-    &:hover {
-        background-color: @colorPink;
-    }
+  .baseCircuit();
+  &:hover {
+    background-color: @colorPink;
+  }
 }
+
 #circuitRobot {
-    .baseCircuit();
-    &:hover {
-        background-color: @colorBlue;
-    }
+  .baseCircuit();
+  &:hover {
+    background-color: @colorBlue;
+  }
 }
 
 .circuitIn {
-    .baseCircuit(@sizeInCircles, @colorWhite);
-    padding: 20px;
-    margin-top: 10px;
+  .baseCircuit(@sizeInCircles, @colorWhite);
+  padding: 20px;
+  margin-top: 10px;
 }
 
-.lineBase(@color){
-    height: @heightLines;
-    margin: auto;
-    width: @widthCirclesPercentage;
-    border-radius: 4px;
-    background-color: @color;
+.lineBase(@color) {
+  height: @heightLines;
+  margin: auto;
+  width: @widthCirclesPercentage;
+  border-radius: 4px;
+  background-color: @color;
 }
 
 .lineBoffin {
-    .lineBase(@colorYellow);
+  .lineBase(@colorYellow);
 }
+
 .lineAlice {
-    .lineBase(@colorPink);
+  .lineBase(@colorPink);
 }
+
 .lineRobot {
-    .lineBase(@colorBlue);
+  .lineBase(@colorBlue);
 }
 
 .popisKrouzku {
-    margin: auto;
-    padding: 15px 0;
-    width: @widthDescription;
+  margin: auto;
+  padding: 15px 0;
+  width: @widthDescription;
 }
+
 /* DESCRIPTIONS */
-.baseRobot(@heightRobot: @sizeLogo){
-    height: @sizeLogo;
-    transform: translateX(-50%);
-    transform: translateY(-50%);
-    display: none;
-}
-.stripe{
-    padding: 50px 0;
+.stripe {
+  padding: 50px 0;
 }
 
-#robAlice{
-    height: 300px;
-    transform: translateY(16.8%);
+.baseRobot(@heightRobot, @translation) {
+  text-align: center;
+  img {
+    height: @heightRobot;
+    transform: @translation;
+  }
 }
 
-#robBoffin{
-    height: 350px;
-    transform: translateY(-14.3%);
+#robAlice {
+  .baseRobot(270px, translateY(18.5%));
 }
 
-#robLego{
-    height: 300px;
-    transform: translateY(-16.8%);
+#robBoffin {
+  .baseRobot(320px, translateY(-15.8%));
 }
 
-.baseButton(@color, @darkColor){
-    background: @color;
-    border-color: @color;
-    float: left;
-    margin-top: 15px;
-    &:hover {
-        background: @darkColor;
-        border-color: @darkColor;
-    }
+#robLego {
+  .baseRobot(280px, translateY(-18%));
 }
 
-.btn-pink{
-    .baseButton(@colorPink, @colorDarkPink);
+.baseButton(@color, @darkColor) {
+  background: @color;
+  border-color: @color;
+  color: @colorWhite;
+  float: left;
+  margin-top: 15px;
+  &:hover, &:focus, &:active {
+    background: @darkColor;
+    border-color: @darkColor;
+    color: @colorWhite;
+  }
 }
 
-.btn-yellow{
-    .baseButton(@colorYellow, @colorYellowDark);
+.btn-pink {
+  .baseButton(@colorPink, @colorDarkPink);
 }
 
-.btn-blue{
-    .baseButton(@colorBlue, @colorBlueDark);
+.btn-yellow {
+  .baseButton(@colorYellow, @colorYellowDark);
+}
+
+.btn-blue {
+  .baseButton(@colorBlue, @colorBlueDark);
 }
 
 

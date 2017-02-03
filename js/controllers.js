@@ -18,9 +18,9 @@ angular.module('witches').controller('AboutController', ['$scope', '$window', fu
 
 //CONTACTS CONTROLLER
 angular.module('witches').controller('ContactsController', ['$scope', '$window', function ($scope, $window) {
-    // $scope.subscribeToNewsletter = function () {
-    //     $window.open("https://docs.google.com/forms/d/e/1FAIpQLSeOwq8VnaSYcWGuHXPcTKuRH2i4BbJFjZ4A7UFYez3JHPA0yw/viewform", "_blank");
-    // }
+    $scope.downloadPosters = function () {
+        $window.open("https://drive.google.com/file/d/0B7GIc7161TAeU1hHSUJ4RmlaSjQ/view?usp=sharing", "_blank");
+    }
 }]);
 
 //WORKSHOP CONTROLLER

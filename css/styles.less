@@ -1,6 +1,7 @@
 @import "variables";
 @import "mainPage";
 @import "workshops";
+@import "about";
 
 /*====================================================================*/
 /* BACKGROUND*/
@@ -43,14 +44,14 @@
   }
 }
 
-#myNavbar .navbar-nav > li {
+ul.navbar-nav > li{
   margin-left: 15px;
   font-size: @fontSizeGeneral;
+  > a:focus {
+    background: @colorWhite;
+  }
   > a:hover {
-    background: url('../img/background/backstars.png') repeat-x;
-    opacity: 0.6;
     font-weight: bolder;
-
   }
 }
 
@@ -67,17 +68,17 @@ ul.dropdown-menu {
   li {
     padding: 15px 0;
   }
-  li:hover > a {
-    color: @colorWhite;
+  li:hover a {
+    color: @colorWhite !important;
   }
   li:nth-child(1):hover {
-    .baseHoverMenu(@colorBlue);
-  }
-  li:nth-child(2):hover {
     .baseHoverMenu(@colorPink);
   }
-  li:nth-child(3):hover {
+  li:nth-child(2):hover {
     .baseHoverMenu(@colorYellow);
+  }
+  li:nth-child(3):hover {
+    .baseHoverMenu(@colorBlue);
   }
 }
 
@@ -87,9 +88,22 @@ ul.dropdown-menu {
   padding: 5px;
 }
 
+@media @mobile{
+  ul.navbar-nav > li {
+    padding: 10px 0;
+  }
+}
+
 @media @tablet {
   ul.nav li.dropdown:hover > ul.dropdown-menu {
     display: block;
+  }
+
+  ul.navbar-nav > li {
+    > a:hover {
+      background: url('../img/background/backstars.png') repeat-x;
+      opacity: 0.6;
+    }
   }
 }
 
@@ -117,11 +131,10 @@ footer {
   text-align: center;
 }
 
+
 /*====================================================================*/
 /* CONTACTS SIDEBAR */
 /*====================================================================*/
-
-
 
 #sticky-social {
   [class*="entypo-"]:before {
@@ -160,8 +173,6 @@ footer {
 #sticky-social button:hover span {
   right: 100%;
 }
-
-
 
 .stickyItemBase(@colorItem){
   background: @colorItem;

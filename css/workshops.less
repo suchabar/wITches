@@ -8,6 +8,12 @@
     max-width: 100%;
   }
 }
+.aboutComponent{
+  margin: 15px auto;
+  img {
+    max-width: 100%;
+  }
+}
 
 .btn-alice-form, .btn-lego-form, .btn-boffin-form {
   float: none;
@@ -23,28 +29,36 @@
 
 @media @mobile {
   .embeddedVideo {
-    .baseEmbedded(480px, 280px);
+    .baseEmbedded(320px, 180px);
   }
 
+  .mobileFit {
+    margin: auto;
+    width: @widthPercentage90;
+  }
 }
 
 @media @tablet {
   .embeddedVideo {
-    .baseEmbedded(640px, 360px);
+    .baseEmbedded(400px, 225px);
+  }
+}
+
+@media @desktop {
+  .embeddedVideo {
+    .baseEmbedded(480px, 270px);
   }
 }
 
 .meetUsTogether {
-    h1{
-      font-size: @fontSizeExtraLarge;
-    }
-    img{
-      height: 400px;
-    }
+  img {
+    height: 400px;
   }
+}
 
 .workshopLine(@lineColor) {
   border-bottom: 2px solid @lineColor;
+  margin-bottom: 10px;
 }
 
 .pinkBottomLine {
@@ -66,3 +80,48 @@
     border-radius: 50%;
   }
 }
+
+.baseSection(@colorLight) {
+  .panel-heading {
+    background: transparent !important;
+    border-color: @colorLight !important;
+    border-bottom: 6px solid;
+  }
+  .panel-body {
+    background: transparent !important;
+    font-size: 1.4em;
+  }
+}
+
+.panel-default {
+  img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+  }
+  .nameMember{
+    font-size: 1.5em;
+  }
+  .descriptionMember{
+    font-size: 1.3em;
+  }
+
+  a{
+    color: @colorBlack !important;
+    font-size: 1.3em;
+  }
+  border-color: transparent;
+  background-color: transparent;
+
+  .aliceSection {
+    .baseSection(@colorPink);
+  }
+  .legoSection {
+    .baseSection(@colorBlue);
+  }
+  .boffinSection {
+    .baseSection(@colorYellow);
+  }
+}
+
+

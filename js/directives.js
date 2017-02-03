@@ -39,3 +39,17 @@ angular.module('witches').directive('moveStars', function()
         }
     }
 });
+angular.module('witches').directive('btnAutoCollapse', function()
+{
+    return {
+        restrict: 'A',
+        link: function(scope, $elm, attrs)
+        {
+            $(document).on('click','.navbar-collapse.in',function(e) {
+                if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+                    $(this).collapse('hide');
+                }
+            });
+        }
+    }
+});

@@ -11,15 +11,61 @@
     }
   }
 
+  .email{
+    margin: 8px !important;
+  }
   #mc-embedded-subscribe{
-    background-color: @colorPink !important;
+    margin-top: 0px;
     &:hover{
       background-color: @colorDarkPink !important;
     }
   }
-
-  //#formular{
-  //  border: none;
-  //  border-radius: 5px;
-  //}
 }
+
+
+.baseSection(@colorLight) {
+  .panel-heading {
+    background: transparent !important;
+    border-color: @colorLight !important;
+    border-bottom: 6px solid;
+    > div{
+      .vcenter;
+    }
+  }
+  .panel-body {
+    background: transparent !important;
+    font-size: 1.4em;
+  }
+}
+
+.panel-default {
+  img {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+  }
+  .nameMember{
+    font-size: 1.5em;
+  }
+  .descriptionMember{
+    font-size: 1.3em;
+  }
+
+  a{
+    color: @colorBlack !important;
+    font-size: 1.3em;
+  }
+  border-color: transparent;
+  background-color: transparent;
+
+  .aliceSection {
+    .baseSection(@colorPink);
+  }
+  .legoSection {
+    .baseSection(@colorBlue);
+  }
+  .boffinSection {
+    .baseSection(@colorYellow);
+  }
+}
+

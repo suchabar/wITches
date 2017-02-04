@@ -26,8 +26,8 @@ angular.module('witches').directive('moveStars', function()
                 var midTmp = 4;
                 var backTmp = 6;
                 var frontTmp = 2;
-                var movLeft = -(event.pageX)/(($("body").width())/2)*($("body").width()/$("body").height());
-                var movTop = -(event.pageY)/(($("body").height())/2);
+                var movLeft = -(event.pageX)/(($("body").width())/7)*($("body").width()/$("body").height());
+                var movTop = -(event.pageY)/(($("body").height())/7);
                 $("#logo-mid").css("top", movTop*midTmp+"px");
                 $("#logo-mid").css("left", movLeft*midTmp+"px");
                 $("#logo-back").css("top", movTop*backTmp+"px");

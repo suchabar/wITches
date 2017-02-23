@@ -19,7 +19,7 @@ angular.module('witches').controller('AboutController', ['$scope', '$window', fu
 //CONTACTS CONTROLLER
 angular.module('witches').controller('ContactsController', ['$scope', '$window', function ($scope, $window) {
     $scope.downloadPosters = function () {
-        $window.open("https://drive.google.com/file/d/0B7GIc7161TAeU1hHSUJ4RmlaSjQ/view?usp=sharing", "_blank");
+        $window.open("https://drive.google.com/open?id=0B7GIc7161TAeb041amNmT1NhYVk", "_blank");
     }
 }]);
 

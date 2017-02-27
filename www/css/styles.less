@@ -1,0 +1,120 @@
+@import "variables";
+@import "main";
+@import "gallery";
+
+/*====================================================================*/
+/* HEADER */
+/*====================================================================*/
+.navbar-left {
+  margin: 0 0 0 10px;
+  padding: 0;
+  img {
+    height: 60px;
+  }
+}
+
+ul.navbar-nav > li{
+  margin-left: 25px;
+  font-size: @fontSizeGeneral;
+  a{
+    line-height: 30px;
+    &:focus, &:hover {
+      color: @colorDarkGreen !important;
+    }
+  }
+}
+
+.navbar-default {
+  background-color: @colorWhite;
+  border-bottom: 5px solid @colorGreen;
+  padding: 5px;
+}
+
+/*====================================================================*/
+/* FOOTER */
+/*====================================================================*/
+footer {
+  border-top: 5px solid @colorGreen;
+  padding-top: 10px;
+  img {
+    max-height: 80px;
+    padding: 5px;
+  }
+}
+
+.supportUsTitle {
+  padding-left: 20px;
+}
+
+.copyright {
+  border-top: 1px solid @colorLightGrey;
+  font-size: 1.1em;
+  .centering;
+  margin-top: 15px;
+  padding: 5px 0;
+}
+
+
+/*====================================================================*/
+/* CONTACTS SIDEBAR */
+/*====================================================================*/
+
+#sticky-social {
+  [class*="entypo-"]:before {
+    font-family: "entypo", sans-serif;
+    font-size: @fontSizeH5;
+  }
+  right: 0;
+  position: fixed;
+  top: 150px;
+  a, button {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    text-align: center;
+    width: 50px;
+    span{
+      line-height: 50px;
+      right: -170px;
+      position: absolute;
+      text-align: center;
+      width: 170px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#sticky-social a:hover span,
+#sticky-social button:hover span {
+  right: 100%;
+}
+
+.stickyItemBase(@colorItem){
+  background: @colorItem;
+  &:hover{
+    background: @colorItem;
+  }
+  span {
+    background: fadeout(@colorItem, 20%);
+  }
+}
+
+#sticky-social a[class*="facebook"]{
+  .stickyItemBase(@colorFb);
+}
+
+#sticky-social a[class*="mail"] {
+  .stickyItemBase(@colorBlack);
+}
+
+#sticky-social a[class*="phone"] {
+  .stickyItemBase(@colorGreen);
+}

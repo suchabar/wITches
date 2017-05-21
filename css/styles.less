@@ -141,10 +141,18 @@ footer {
 /*====================================================================*/
 
 #sticky-social {
+  /* font - entypo */
   [class*="entypo-"]:before {
     font-family: "entypo", sans-serif;
+    font-size: 1.5em;
   }
 
+  /* font - zocial */
+  [class*="zocial-"]:before {
+     font-family: 'zocial', sans-serif;
+     font-size: 1.5em;
+  }
+  
   right: 0;
   position: fixed;
   top: 150px;
@@ -197,9 +205,22 @@ footer {
 }
 
 #sticky-social a[class*="phone"] {
-  .stickyItemBase(@colorYellow);
+  .stickyItemBase(#20ce58);
 }
 
 #sticky-social a[class*="paper-plane"]{
-  .stickyItemBase(@colorBlue);
+  .stickyItemBase(@colorGrey);
 }
+
+#sticky-social a[class*="twitter"]{
+  .stickyItemBase(#55acee);
+}
+
+#sticky-social a[class*="instagrem"]{
+  .stickyItemBase(#fccc63);
+}
+
+#sticky-social a[class*="youtube"]{
+  .stickyItemBase(#bb0000);
+}
+

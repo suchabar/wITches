@@ -25,28 +25,28 @@
 <!-- WE LEARN CHILDREN TO DO MAGIC IN IT -->
 <div id="mainInfo" class="row centering">
     <h1 class="motto">Učíme děti kouzlit v IT</h1>
-    <div class="row"><p class="subMotto">Kroužek a workshopy zdarma pro děti 2. stupně ZŠ</p></div>
+    <div class="row"><p class="subMotto">Kroužek a workshopy zdarma pro děti od 5. do 9. třídy.</p></div>
     <div class="row marginTop30">
         <div class="col-md-2"></div>
         <div class="col-md-8 marginTop30">
 
-            <!--ALICE-->
+            <!--PROGRAMMING-->
             <div class="col-sm-4">
-                <a scroll-on-click href="#alice">
-                    <div id="circuitAlice" class="row">
+                <a scroll-on-click href="#scratch">
+                    <div id="circuitScratch" class="row">
                         <div class="circuitIn">
-                            <img src="img/icons/robots/alice.png" alt="programming" width="90">
+                            <img src="img/icons/robots/scratch.png" alt="programming" width="90">
                         </div>
                     </div>
                 </a>
-                <div class="circuitTitle"><h5>OBJEKTOVÉ <span style = "display: block;">PROGRAMOVÁNÍ</span></h5></div>
-                <div class="lineAlice"></div>
+                <div class="circuitTitle"><h5>PROGRAMOVÁNÍ</h5></div>
+                <div class="lineScratch"></div>
                 <div class="popisKrouzku">
-                    <p>Napište pár magických řádků a animovaný film či počítačová hra je na světě.</p>
+                    <p>Vytvoř si animovaný příběh nebo hru ve SCRATCHi a poznej při tom magii programování.</p>
                 </div>
             </div>
 
-            <!--BOFFIN-->
+            <!--ELECTROTECHNICS-->
             <div class="col-sm-4">
                 <a scroll-on-click href="#boffin">
                     <div id="circuitBoffin" class="row">
@@ -55,26 +55,30 @@
                         </div>
                     </div>
                 </a>
-                <div class="circuitTitle"><h5 >ELEKTROSTAVEBNICE <span style = "display: block;">BOFFIN</span></h5></div>
+                <div class="circuitTitle"><h5>ELEKTROTECHNIKA</h5></div>
                 <div class="lineBoffin"></div>
                 <div class="popisKrouzku">
-                    <p>Vykouzlete obvody, rozsviťte diody, spusťte poplach.</p>
+                    <p>Vykouzlete obvody, rozsviťte diody a roztočte vrtule s BOFFINem.
+                        Zkombinujte programování a elektrotechniku a ovládněte svět s MICRO:BITem.
+                    </p>
                 </div>
             </div>
 
             <!--ROBOTS-->
             <div class="col-sm-4">
-                <a scroll-on-click href="#lego">
+                <a scroll-on-click href="#ozobots">
                     <div id="circuitRobot" class="row">
                         <div class="circuitIn">
                             <img src="img/icons/robots/lego.png" alt="robot" width="90">
                         </div>
                     </div>
                 </a>
-                <div class="circuitTitle"><h5>PROGRAMOVÁNÍ <span style = "display: block;">LEGO ROBOTŮ</span></h5></div>
+                <div class="circuitTitle"><h5>ROBOTI</h5></div>
                 <div class="lineRobot"></div>
                 <div class="popisKrouzku">
-                    <p>Postavte robota z LEGO Mindstorms a čarujte, dokud Vás nezačne poslouchat.</p>
+                    <p>Postavte si robota z LEGA a kouzly ho přiveďte k životu.
+                        Poznejte OZOBOTA a očarujte ho barvami a kódy.
+                    </p>
                 </div>
             </div>
         </div>
@@ -82,19 +86,19 @@
     </div>
 </div>
 
-<!-- ALICE -->
-<div id="alice" class="row stripe">
+<!-- SCRATCH -->
+<div id="scratch" class="row stripe">
     <div class="row">
         <div class="col-xs-1 col-sm-1 col-lg-2"></div>
         <div class="col-xs-10 col-sm-5 col-lg-4">
-            <h2>HRAVÉ PROGRAMOVÁNÍ S ALICE</h2>
-            <p>Cílem workshopu je naučit se v grafickém prostředí <a class="link" href="http://www.alice.org" target="_blank">Alice</a>, pochopit základy
-                objektového programování a nakonec napsat několik řádků kódu a tím vytvořit
-                vlastní příběh či hru. Kreativitě se meze nekladou. Přijďte si vyčarovat vlastní magický svět!</p>
-            <button class="btn btn-lg btn-pink" ng-click="tryWorkshop('/workshops/alice')" >Chci to zkusit !</button>
+            <h2 class="text-uppercase">Programování příběhů a her v prostředí Scratch</h2>
+            <p>Naučte se s námi základní principy programování v prostředí <a class="link" href="https://scratch.mit.edu/">
+                Scratch</a>. Prakticky si zkusíme, jak funguje cyklus, podmínka a nebo událost či proměnná v daných minihrách.
+                Zkusíme si také, jaké to je hledat chyby, a nebo programovat ve dvojici multiplayer hru.</p>
+            <button class="btn btn-lg btn-pink" ng-click="tryWorkshop('/workshops/scratch')" >Chci to zkusit !</button>
         </div>
-        <div id="robAlice" class="col-sm-5 col-lg-4 hidden-xs">
-            <img src="img/robots/aliceCut.png"/>
+        <div id="robScratch" class="col-sm-5 col-lg-4 hidden-xs">
+            <img src="img/robots/scratchCut.png"/>
         </div>
         <div class="col-xs-1 col-sm-1 col-lg-2"></div>
     </div>
@@ -118,14 +122,51 @@
     </div>
 </div>
 
+<!-- MICRO:BIT -->
+<div id="microbit" class="row stripe">
+    <div class="row">
+        <div class="col-xs-1 col-sm-1 col-lg-2"></div>
+        <div class="col-xs-10 col-sm-5 col-lg-4">
+            <h2 class="text-uppercase text-left">Programování a elektro s počítačem micro:bit</h2>
+            <p class="text-left">Malý, ale šikovný čaroděj <a class="link" href="https://microbit.org/guide/hardware/" target="_blank">BBC micro:bit</a> nám předvede, že programování a elektrotechnika
+                jdou ruku v ruce. V průběhu workshopu budeme požívat programátorská kouzla k oživení elektrických součástek.
+                Také zjistíme, jakým jazykem spolu mohou přístroje komunikovat.
+            </p>
+            <button class="btn btn-lg btn-yellow" ng-click="tryWorkshop('/workshops/microbit')">Chci to zkusit !</button>
+        </div>
+        <div id="robMicrobit" class="col-sm-5 col-lg-4 hidden-xs">
+            <img src="img/robots/microbit.png"/>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-lg-2"></div>
+    </div>
+</div>
+
+<!-- OZOBOTS -->
+<div id="ozobots" class="row stripe">
+    <div class="row">
+        <div class="col-xs-1 col-sm-1 col-lg-2"></div>
+        <div id="robOzobot" class="col-sm-5 col-lg-4 hidden-xs">
+            <img src="img/robots/ozobot.png"/>
+        </div>
+        <div class="col-xs-10 col-sm-5 col-lg-4">
+            <h2 class="text-uppercase">Základy programování kamarádských ozobotů</h2>
+            <p>Hravá výuka algoritmického myšlení s roztomilými <a class="link" href="http://ozobot.com/" target="_blank">Ozoboty</a>.
+                Naučte tyto malé robůtky projet co nejrychleji bludištěm, přitom povídat a ještě svítit různymi barvami.
+            </p>
+            <button class="btn btn-lg btn-blue" ng-click="tryWorkshop('/workshops/ozobots')">Chci to zkusit !</button>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-lg-2"></div>
+    </div>
+</div>
+
 <!-- MINDSTORMS -->
 <div id="lego" class="row stripe">
     <div class="row">
         <div class="col-xs-1 col-sm-1 col-lg-2"></div>
         <div class="col-xs-10 col-sm-5 col-lg-4">
-            <h2>KAMARÁDŠTÍ ROBOTI Z LEGO MINDSTORMS</h2>
-            <p>Na workshopu nahlédnete do světa robotiky. Vyzkoušíte si oživit robota, pochopíte, jak funguje, a budete mu
-                zadávat nejrůznější úkoly. Hledáme odvážné čarodějky a čaroděje s originálními nápady. Čarujeme se
+            <h2>ROBOTI Z LEGO MINDSTORMS</h2>
+            <p>Na workshopu nahlédnete do světa robotiky. Vyzkoušíte si oživit robota, pochopíte, jak funguje, a budete
+                mu zadávat nejrůznější úkoly. Hledáme odvážné čarodějky a čaroděje s originálními nápady. Čarujeme se
                 stavebnicí <a class="link" href="https://www.lego.com/cs-cz/mindstorms/?domainredir=mindstorms.lego.com" target="_blank">LEGO Mindstorms Education</a>.
             </p>
             <button class="btn btn-lg btn-blue" ng-click="tryWorkshop('/workshops/mindstorms')">Chci to zkusit !</button>

@@ -45,7 +45,7 @@
 
 }
 
-#alice, #lego {
+#scratch, #microbit, #lego {
   background-color: @colorBlackTrans;
   h2, p {
     color: @colorWhite;
@@ -69,7 +69,7 @@
   }
 }
 
-#circuitAlice {
+#circuitScratch {
   .baseCircuit();
   &:hover {
     background-color: @colorPink;
@@ -101,7 +101,7 @@
   .lineBase(@colorYellow);
 }
 
-.lineAlice {
+.lineScratch {
   .lineBase(@colorPink);
 }
 
@@ -117,7 +117,7 @@
 
 /* DESCRIPTIONS */
 .stripe {
-  padding: 50px 0;
+  padding: 30px 0;
 }
 
 .baseRobot(@heightRobot, @translation) {
@@ -128,16 +128,24 @@
   }
 }
 
-#robAlice {
-  .baseRobot(220px, translateY(-22.7%));
+#robScratch {
+  .baseRobot(220px, translateY(-13.6%));
+}
+
+#robMicrobit {
+  .baseRobot(350px, translateY(9.6%));
 }
 
 #robBoffin {
-  .baseRobot(320px, translateY(-15.8%));
+  .baseRobot(300px, translateY(-10%));
+}
+
+#robOzobot {
+  .baseRobot(350px, translateY(8.5%));
 }
 
 #robLego {
-  .baseRobot(280px, translateY(-18%));
+  .baseRobot(280px, translateY(-10.7%));
 }
 
 .baseButton(@color, @darkColor) {

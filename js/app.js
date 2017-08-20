@@ -22,9 +22,9 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
                 templateUrl: 'src/course.html',
                 controller: 'WorkshopController'
             })
-        .when('/workshops/alice',
+        .when('/workshops/scratch',
             {
-                templateUrl: 'src/workshops/alice.html',
+                templateUrl: 'src/workshops/scratch.html',
                 controller: 'WorkshopController'
             })
         .when('/workshops/boffin',
@@ -35,6 +35,16 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         .when('/workshops/mindstorms',
             {
                 templateUrl: 'src/workshops/lego.html',
+                controller: 'WorkshopController'
+            })
+        .when('/workshops/ozobots',
+            {
+                templateUrl: 'src/workshops/ozobots.html',
+                controller: 'WorkshopController'
+            })
+        .when('/workshops/microbit',
+            {
+                templateUrl: 'src/workshops/microbit.html',
                 controller: 'WorkshopController'
             })
         .otherwise(

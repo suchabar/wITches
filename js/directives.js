@@ -10,7 +10,7 @@ angular.module('witches').directive('scrollOnClick', function()
 
                 var $target;
                 $target = $(idToScroll);
-                $("body").animate({scrollTop: $target.offset().top - 60}, 800);
+                $("body, html").animate({scrollTop: $target.offset().top - 60}, 800);
             });
         }
     }

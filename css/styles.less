@@ -47,12 +47,24 @@
 ul.navbar-nav > li{
   margin-left: 15px;
   font-size: @fontSizeGeneral;
+  display:inline-block;
+  text-align:center;
   > a:focus {
     background: @colorWhite;
   }
   > a:hover {
     font-weight: bolder;
   }
+  > a::after {
+    display:block;
+    content:attr(title);
+    font-weight:bold;
+    height:1px;
+    color:transparent;
+    overflow:hidden;
+    visibility:hidden;
+    margin-bottom:-1px;
+}
 }
 
 .baseHoverMenu(@color) {

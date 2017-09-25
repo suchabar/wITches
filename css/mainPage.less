@@ -148,18 +148,34 @@
   .baseRobot(280px, translateY(-10.7%));
 }
 
-.baseButton(@color, @darkColor) {
-  background: @color;
-  border-color: @color;
-  color: @colorWhite;
-  float: left;
-  margin-top: 15px;
-  &:hover, &:focus, &:active {
-    background: @darkColor;
-    border-color: @darkColor;
-    color: @colorWhite;
+/*DISABLEDBUTTONS*/
+.baseButton(@color,@darkColor){
+  cursor:not-allowed;
+  background:@darkColor;
+  border-color:@darkColor;
+  color:@colorWhiteTrans;
+  float:left;
+  margin-top:15px;
+  &:hover,&:focus,&:active{
+    background:@darkColor;
+    border-color:@darkColor;
+    color:@colorWhiteTrans;
   }
 }
+
+/*ENABLEDBUTTONS*/
+//.baseButton(@color,@darkColor){
+//background:@color;
+//border-color:@color;
+//color:@colorWhite;
+//float:left;
+//margin-top:15px;
+//&:hover,&:focus,&:active{
+//background:@darkColor;
+//border-color:@darkColor;
+//color:@colorWhite;
+//}
+//}
 
 .btn-pink {
   .baseButton(@colorPink, @colorDarkPink);

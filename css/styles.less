@@ -158,17 +158,6 @@ footer {
 /*====================================================================*/
 
 #sticky-social {
-  /* font - entypo */
-  [class*="entypo-"]:before {
-    font-family: "entypo", sans-serif;
-    font-size: 1.5em;
-  }
-
-  /* font - zocial */
-  [class*="zocial-"]:before {
-     font-family: 'zocial', sans-serif;
-     font-size: 1.5em;
-  }
   
   right: 0;
   position: fixed;
@@ -196,6 +185,10 @@ footer {
     margin: 0;
     padding: 0;
   }
+  img{
+    margin: 5px 0px 5px;
+    height: 20px;
+  }
 }
 
 #sticky-social a:hover span,
@@ -213,31 +206,31 @@ footer {
   }
 }
 
-#sticky-social a[class*="facebook"]{
+#sticky-social a[class="facebook"]{
   .stickyItemBase(#3b5998);
 }
 
-#sticky-social a[class*="mail"] {
+#sticky-social a[class="mail"] {
   .stickyItemBase(@colorPink);
 }
 
-#sticky-social a[class*="phone"] {
+#sticky-social a[class="phone"] {
   .stickyItemBase(#20ce58);
 }
 
-#sticky-social a[class*="paper-plane"]{
+#sticky-social a[class="paper-plane"]{
   .stickyItemBase(@colorGrey);
 }
 
-#sticky-social a[class*="twitter"]{
+#sticky-social a[class="twitter"]{
   .stickyItemBase(#55acee);
 }
 
-#sticky-social a[class*="instagrem"]{
+#sticky-social a[class="instagrem"]{
   .stickyItemBase(#fccc63);
 }
 
-#sticky-social a[class*="youtube"]{
+#sticky-social a[class="youtube"]{
   .stickyItemBase(#bb0000);
 }
 

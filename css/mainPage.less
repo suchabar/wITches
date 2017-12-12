@@ -148,33 +148,21 @@
   .baseRobot(280px, translateY(-10.7%));
 }
 
-/*DISABLEDBUTTONS*/
+/*ENABLEDBUTTONS*/
 .baseButton(@color,@darkColor){
-  cursor:not-allowed;
-  background:@darkColor;
-  border-color:@darkColor;
-  color:@colorWhiteTrans;
+  background:@color;
+  border-color:@color;
+  color:@colorWhite;
   float:left;
   margin-top:15px;
   &:hover,&:focus,&:active{
-    background:@darkColor;
+    background:@darkColor;  
     border-color:@darkColor;
-    color:@colorWhiteTrans;
+    color:@colorWhite;
   }
 }
 
-/*ENABLEDBUTTONS*/
-//.baseButton(@color,@darkColor){
-//background:@color;
-//border-color:@color;
-//color:@colorWhite;
-//float:left;
-//margin-top:15px;
-//&:hover,&:focus,&:active{
-//background:@darkColor;
-//border-color:@darkColor;
-//color:@colorWhite;
-//}
+//.btn-main{
 //}
 
 .btn-pink {

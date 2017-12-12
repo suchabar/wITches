@@ -22,9 +22,41 @@
   }
 }
 
-.btn-scratch-form, .btn-lego-form, .btn-boffin-form {
+/**/
+.btn-course-form:disabled{
+  cursor:not-allowed;
+  background:#c2375d;
+  border-color:#c2375d;
+  color:@colorWhiteTrans;
+  &:hover,&:focus,&:active{
+    background:#c2375d;  
+    border-color:#c2375d;
+    color:@colorWhiteTrans;
+  }
+}
+
+
+.btn-form{
   float: none;
   margin-bottom: 15px;
+}
+
+
+
+.btn-form(@darkColor){
+  float: none;
+  margin-bottom: 15px;
+  &:disabled{
+    cursor:not-allowed;
+    background:@darkColor;
+    border-color:@darkColor;
+    color:@colorWhiteTrans;
+    &:hover{
+      background:@darkColor;
+      border-color:@darkColor;
+      color:@colorWhiteTrans;
+    }
+  }
 }
 
 .baseEmbedded(@vidWidth, @vidHeight) {
